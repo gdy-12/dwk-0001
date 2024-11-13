@@ -32,7 +32,7 @@
       height: 400%;
     }
     .fade{
-      animation: fade 8s infinite;
+      animation: fade 15s infinite;
     }
     @keyframes fade{
       0%{opacity: 0;}
@@ -60,20 +60,22 @@
   </div> 
  </div> 
  <script>
-   var slideIndex = 1;
+   var slideIndex = 1
+   SlideShow()
    
-   function SlideShow(){var i
+   function SlideShow(){
+   var i
    var x = document.getElementsByClassName("slide")
    //console.log(x.length)
    if(slideIndex>x.length){
-    slideindex = 1;
+    slideindex = 1
    }
    for(i=0; i<x.length; i++){
     x[i].style.display = "none";
    }
    x[slideIndex-1].style.display = "block";
    slideIndex++;
-   setTimeout(SlideShow, 200);
+   setTimeout(SlideShow, 2000);
   }
  </script>
 
